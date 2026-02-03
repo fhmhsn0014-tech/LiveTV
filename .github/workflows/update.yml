@@ -3,21 +3,25 @@ on:
   schedule:
     - cron: '0 */6 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write # هذا السطر يطلب صلاحية الكتابة صراحة
+
 jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
       - run: pip install requests
       - run: python fetch_links.py
-      - name: Save
+      - name: Save Changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "Action"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add channels.json
-          git commit -m "Update" || exit 0
+          git commit -m "Update Channels" || exit 0
           git push
