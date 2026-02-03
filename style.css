@@ -1,0 +1,16 @@
+:root { --primary: #e50914; --bg: #0f0f0f; --side: #1a1a1a; }
+body { margin: 0; font-family: sans-serif; background: var(--bg); color: white; }
+.app-container { display: flex; height: 100vh; }
+.sidebar { width: 300px; background: var(--side); display: flex; flex-direction: column; border-left: 1px solid #333; }
+.logo { padding: 20px; font-size: 24px; font-weight: bold; color: var(--primary); text-align: center; }
+.logo span { color: white; }
+.search-box { padding: 10px; }
+.search-box input { width: 90%; padding: 10px; background: #333; border: none; border-radius: 5px; color: white; }
+.channel-list { overflow-y: auto; flex-grow: 1; }
+.channel-item { display: flex; align-items: center; padding: 12px; cursor: pointer; border-bottom: 1px solid #222; transition: 0.2s; }
+.channel-item:hover { background: #333; }
+.channel-item img { width: 40px; height: 40px; border-radius: 50%; margin-left: 12px; background: #000; }
+.player-section { flex-grow: 1; display: flex; flex-direction: column; }
+.video-wrapper { position: relative; width: 100%; height: 75vh; background: #000; }
+.live-badge { position: absolute; top: 15px; right: 15px; background: var(--primary); padding: 5px 10px; border-radius: 3px; font-size: 12px; z-index: 5; }
+.video-info { padding: 20px; }
