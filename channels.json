@@ -15,11 +15,6 @@
         "logo": "https://via.placeholder.com/50/FF0000/FFFFFF?text=TV"
     },
     {
-        "name": "Canal+ (1080p)",
-        "url": "https://viamotionhsi.netplus.ch/live/eds/canalplusclair/browser-HLS8/canalplusclair.m3u8",
-        "logo": "https://via.placeholder.com/50/FF0000/FFFFFF?text=TV"
-    },
-    {
         "name": "Canal+ Haiti [Geo-blocked]",
         "url": "https://vdo.pro-fhi.net:3605/live/dgenlcpmlive.m3u8",
         "logo": "https://via.placeholder.com/50/FF0000/FFFFFF?text=TV"
